@@ -2,7 +2,7 @@ Package: RNAseqNet
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Authors@R: c(person("Alyssa", "Imbert", role = c("aut", "cre"), email="alyssa.imbert@inra.fr"),
+Authors@R: c(person("Alyssa", "Imbert", role = c("aut"), email="alyssa.imbert@inra.fr"),
              person("Nathalie", "Villa-Vialaneix", role = c("aut", "cre"), email="nathalie.villa-vialaneix@inra.fr"))
 Maintainer: Nathalie Villa-Vialaneix <nathalie.villa-vialaneix@inra.fr>
 Description: More about what it does (maybe more than one line)
