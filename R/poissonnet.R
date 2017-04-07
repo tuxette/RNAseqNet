@@ -1,4 +1,36 @@
 ## TODO : documentation avec import de glmnet
+
+# donor pools, selection of sigma, imputed datasets
+################################################################################
+#' @import glmnet
+#' @import PoiClaClu
+#' @importFrom glmnet glmnet
+#' @importFrom PoiClaClu FindBestTransform
+#'
+#' @title Infer a network from RNA-seq expression
+#' @export
+#'
+#' @description
+#' \code{GLMnetwork} infers a network from RNA-seq expression by using a log-linear Poisson
+#' graphical model 
+#'
+#' @param counts a n x p matrix of RNA-seq expression (numeric matrix or data frame)
+#' @param lambdas a sequence of decresing positive numbers to control
+#'  the regularization (numeric vector)
+#' @param normalize logical value to normalize predictors in the log-linear
+#' Poisson graphical model bu using a log transformation, default to TRUE
+#'
+#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#'
+#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#'
+#' @seealso \code{\link{stabilitySelection}}
+#' 
+#'
+#' @references{}
+#' @return S3 object of class \code{GLMnetwork} ....
+#'    
+
 GLMnetwork <- function(counts, lambdas, normalize = TRUE) {
   nvar <- ncol(counts)
   nobs <- nrow(counts)
@@ -44,6 +76,48 @@ print.GLMpath <- function(x, ...) {
   cat("Object of class 'GLMpath'...\n",
       length(x), "predicted sets of coefficients from Poisson GLM.")
 }
+
+############################################################
+## Selection of lambda
+############################################################
+#'
+#' @import glmnet
+#' @import PoiClaClu
+#' @importFrom glmnet glmnet
+#' @importFrom PoiClaClu FindBestTransform
+#'
+#' @title Selection of the regularization parameter for high dimensional undirected graph
+#' @export
+#'
+#' @description
+#' \code{stabilitySelection} implements the regularization parameter selection by using 
+#' Stability Approach to Regularization Selection (StARS).
+#'
+#' @param counts a n x p matrix of RNA-seq expression (numeric matrix or data frame)
+#' @param lambdas a sequence of decresing positive numbers to control
+#'  the regularization (numeric vector)
+#' @param B number of iterations for stability selection, default to 20
+#'
+#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#'
+#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' 
+#' @seealso \code{\link{GLMnetwork}}
+#' 
+#' @examples 
+#' data(lung)
+#' lambdas <- seq(5, 0.1, -0.1)
+#' stab <- stabilitySelection(lung, lambdas)
+#' plot(stab)
+#'
+#' @return S3 object of class \code{stabilitySelection} : a list consisiting of
+#'  \itemize{
+#'        \item{\code{lambdas}}{ numeric vector used for regularization path}
+#'        \item{\code{B}}{number of iterations for stability selection}
+#'        \item{\code{best}}{lambda value that gives the optimal network}
+#'        \item{\code{variabilities}}{numeric vector ...}
+#'    }
+#'
 
 stabilitySelection <- function(counts, lambdas, B = 20) {
   nvar <- ncol(counts)
@@ -96,6 +170,7 @@ print.stars <- function(x, ...) {
       "(variability:", x$variabilities[x$best], ")")
 }
 
+#' @import graphics
 #' @export
 #' @rdname stars
 plot.stars <- function(x, ...) {
