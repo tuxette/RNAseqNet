@@ -10,9 +10,18 @@
 #' @export
 #'
 #' @description
-#' \code{imputeHD} does blabla
+#' \code{imputeHD} performs multiple hot-deck imputation on an input data frame with missing rows. Each missing row
+#' is imputed with a unique donor. This method requires an auxiliary dataset to compute similaritities between 
+#' individuals and create the pool of donors.
 #'
-#' @param X tructruc
+#' @param X n x p numeric matrix containing RNA-seq expression with missing rows
+#'  (numeric matrix or data frame)
+#' @param Y auxiliary dataset (numeric matrix or data frame)
+#' @param sigma threshold for hot-deck imputation, obtained with the 
+#'  function\code{\link{chooseSigma}} (numeric, positive)
+#' @param m number of replicat in multiple imputation (integer), default to 50.
+#' @param seed a single value, interpreted as an in integer, in
+#' order to control the hazard
 #'
 #' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 #'
@@ -21,22 +30,34 @@
 #' @references {Picheny, V., Servien, R. and Villa-Vialaneix, N. (2016)
 #' Interpretable sparse SIR for digitized functional data. \emph{Preprint}.}
 #'
-#' @seealso \code{\link{chooseSigma}}, \code{\link{netImputeHD}}
+#' @seealso \code{\link{chooseSigma}}, \code{\link{ImputedGLMnetwork}}
 #'
 #' @examples
-#' set.seed(1140)
-#' tsteps <- seq(0, 1, length = 50)
-#' \dontrun{print(res_ridge)}
+#' data(lung)
+#' X_full <- lung
+#' data(thyroid)
+#' #' # create missing observations in lung dataset
+#' miss <- 0.2
+#' nobs <- dim(X_full)[[1]]
+#' miss_ind <- sample(1:nobs, round(miss * nobs), replace = FALSE)
+#' X_miss <- X_full
+#' X_miss[miss_ind, ] <- NA
+#' lung <- na.omit(X_miss)
+#' # Multiple hot-deck imputation
+#' sigma <- 2
+#' don <- imputeHD(lung,thyroid,sigma)
 #'
 #' @return S3 object of class \code{HDImputed}: a list consisting of
 #' \itemize{
-#'    \item{\code{donors}}{ blabla}
-#'    \item{\code{draws}}{ blabla}
-#'    \item{\code{data}}{ blabla}
+#'    \item{\code{donors}}{a list , each element of this list 
+#'    contains the donors for every missing observations}
+#'    \item{\code{draws}}{ a data frame which indicates which donor was
+#'    chosen for each missing samples}
+#'    \item{\code{data}}{ a list of m imputed datasets}
 #'  }
 #'
 
-imputeHD <- function(X, Y, sigma, m = 50) {
+imputeHD <- function(X, Y, sigma, m = 50, seed=NULL) {
   if (!is.null(seed)) set.seed(seed)
 
   # prepare data
@@ -137,6 +158,33 @@ createDonors <- function(X, Y, sigma, seed = NULL) {
 }
 
 ## TODO: faire documentation => export
+#
+################################################################################
+#  
+################################################################################
+#' @import stats
+#' @title Average variance intra-donors
+#' @export
+#'
+#' @description
+#' \code{varIntra} does compute the average variance intra-D(i) (Vintra) for a list of donors associated with each
+#' missing individuals.
+#'
+#' @param X n x p numeric matrix containing RNA-seq expression with missing rows
+#'  (numeric matrix or data frame)
+#' @param Y auxiliary dataset (numeric matrix or data frame)
+#' @param donors the list of vectos which contains the donors for each missing samples in X
+#'
+#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#'
+#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#'
+#' @references {}
+#'
+#' @seealso \code{\link{chooseSigma}}
+#' 
+#' @return \code{varIntra} returns a numeric value which corresponds to the average variance for the group of donors 
+
 varIntra <- function(X, Y, donors) {
   # prepare data
   if (is.null(rownames(X)) | is.null(rownames(Y))) {
@@ -159,6 +207,47 @@ varIntra <- function(X, Y, donors) {
 }
 
 ## TODO: faire documentation => export
+################################################################################
+# choose the threshold sigma for multiple hot-deck imputation
+################################################################################
+#'
+#' @title Select the threshold sigma for hd-MI
+#' @export
+#'
+#' @description
+#' \code{chooseSigma} does computes the average variance intra-D(i) for different values of sigma in order to 
+#' select a sigma which makes a good trade-off between similarity within the pool of donors and variety 
+#' (large enough number of donors in every pool).
+#'
+#' @param X n x p numeric matrix containing RNA-seq expression with missing rows
+#'  (numeric matrix or data frame)
+#' @param Y auxiliary dataset (numeric matrix or data frame)
+#' @param sigma_list a sequence of increasing positive number of sigma (numeric vector)
+#' @param seed a singlue value, interpreted as an integern in order to control the hazard
+#'
+#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#'
+#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#'
+#' @references {}
+#'
+#' @seealso \code{\link{varIntra}}
+#' 
+#' @examples 
+#' data(lung)
+#' X_full <- lung
+#' data(thyroid)
+#' miss <- 0.2
+#' nobs <- dim(X_full)[[1]]
+#' miss_ind <- sample(1:nobs, round(miss * nobs), replace = FALSE)
+#' X_miss <- X_full
+#' X_miss[miss_ind, ] <- NA
+#' lung <- na.omit(X_miss)
+#' sig <- chooseSigma(lung, thyroid,1:5)
+#' plot(sig, type="b")
+#' 
+#' @return a data frame associating a sigma of the \code{sigma_list} with the corresponding \code{varIntra}
+#'
 chooseSigma <- function(X, Y, sigma_list, seed = NULL) {
   if (!is.null(seed)) set.seed(seed)
 
