@@ -1,0 +1,24 @@
+citHeader("To cite the 'RNAseqNet' package in publications, use:")
+
+year = sub('.*(2[[:digit:]]{3})-.*', '\\1', meta$Date, perl = TRUE)
+vers = paste('R package version', meta$Version)
+
+citEntry(
+  entry = 'manual',
+  title = paste('RNAseqNet:', meta$Title),
+  author = as.person(meta$Author),
+  year = year,
+  note = vers,
+  textVersion = paste('Villa-Vialaneix N., Imbert A. (', year, ') SISIR: ', meta$Title, '. ', vers, '.', sep = '')
+)
+
+citEntry(
+  entry = 'unpublished',
+  title = 'Multiple hot-deck imputation for network inference from RNA sequencing data',
+  author = personList(as.person("Alyssa Imbert"), as.person("Caroline Le Gall"), as.person("Claudia Armenise"), as.person("Gregory Lefebvre"), as.person("Jorg Hager"), as.person("Armand Valsesia"), as.person("Pierre-Antoine Gourraud"), as.person("Nathalie Viguerie"), as.person("Nathalie Villa-Vialaneix")),
+  note = 'Preprint',
+  
+  textVersion = paste('mbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J., Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)',
+                      'Multiple hot-deck imputation for network inference from RNA sequencing data.',
+                      'Preprint.')
+)
