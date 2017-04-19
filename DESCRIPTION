@@ -2,6 +2,7 @@ Package: RNAseqNet
 Type: Package
 Title: Log-linear Poisson Graphical Model with HD-MI
 Version: 0.1.0
+Date: 2017-04-19
 Authors@R: c(person("Alyssa", "Imbert", role = c("aut"), email="alyssa.imbert@inra.fr"),
              person("Nathalie", "Villa-Vialaneix", role = c("aut", "cre"), email="nathalie.villa-vialaneix@inra.fr"))
 Maintainer: Nathalie Villa-Vialaneix <nathalie.villa-vialaneix@inra.fr>
