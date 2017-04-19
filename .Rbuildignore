@@ -1,6 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-.git
-.gitignore
-.travis.yml
-LICENSE
+^\.git$
+^\.gitignore$
+^LICENSE$
+^\.travis\.yml$
+^appveyor\.yml$
