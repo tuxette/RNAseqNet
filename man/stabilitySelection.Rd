@@ -37,8 +37,8 @@ When input \code{lambdas} are null the default sequence of
 }
 \examples{
 data(lung)
-lambdas <- 4 * 10^(seq(0, -2, length = 10))
-stability_lung <- stabilitySelection(lung, lambdas = lambdas, B = 5)
+lambdas <- 4 * 10^(seq(0, -2, length = 5))
+stability_lung <- stabilitySelection(lung, lambdas = lambdas, B = 4)
 \dontrun{plot(stability_lung)}
 
 }
