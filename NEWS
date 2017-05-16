@@ -1,2 +1,20 @@
+Version 0.1.1
+  new features
+    GLMnetToGraph can now be used with matrices
+
+  improved
+    column names of the count data are now included in the result of GLMnetwork
+
+  bug fixes
+    fixed two bugs in plot.HDpath
+
+  documentation
+    added a vignette and a complete user guide
+    fixed a few typos
+    fixed an imprecise statement in print.GLMpath documentation
+    updated references
+    improved README file
+
+*******************************************************************************
 Version 0.1.0 [2017-04-19]
   Initial release

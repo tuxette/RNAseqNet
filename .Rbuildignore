@@ -5,3 +5,12 @@
 ^LICENSE$
 ^\.travis\.yml$
 ^appveyor\.yml$
+^inst/doc/RNAseqNetUsersGuide_cache$
+^inst/doc/RNAseqNetUsersGuide_files$
+^vignettes/RNAseqNet.aux$
+^vignettes/RNAseqNet.fdb_latexmk$
+^vignettes/RNAseqNet.fls$
+^vignettes/RNAseqNet.log$
+^vignettes/RNAseqNet.out$
+^vignettes/RNAseqNet.pdf$
+^vignettes/RNAseqNet.toc$
