@@ -12,4 +12,4 @@ the inference and the StARS criterion is implemented to drive the selection of
 the regularization parameter.
 
 See [[Citation file]](./inst/CITATION) for citation details and the 
-[[User's Guide]](./inst/doc/RNAsetNetUsersGuide.html) for an example of usage.
+[[User's Guide]](./inst/doc/RNAseqNetUsersGuide.html) for an example of usage.
