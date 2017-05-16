@@ -80,6 +80,7 @@ GLMnetwork <- function(counts, lambdas = NULL, normalize = TRUE) {
     res[upper.tri(res)] <- all_betas[upper.tri(all_betas, diag = TRUE)]
     res[lower.tri(res)] <- all_betas[lower.tri(all_betas)]
     diag(res) <- 1
+    colnames(res) <- rownames(res) <- colnames(counts)
     return(res)
   })
 
@@ -163,7 +164,8 @@ print.GLMpath <- function(x, ...) {
 #'   \item{\code{lambdas}}{ numeric regularization parameters used for
 #'   regularization path}
 #'   \item{\code{B}}{ number of iterations for stability selection}
-#'   \item{\code{best}}{ lambda value selected by StARS}
+#'   \item{\code{best}}{ index of the regularization parameter selected by StARS
+#'   in \code{lambdas}}
 #'   \item{\code{variabilities}}{ numeric vector having same length than lambdas
 #'   and providing the variability value as defined by StARS along the path}
 #' }
