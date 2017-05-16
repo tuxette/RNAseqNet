@@ -25,10 +25,9 @@
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-#' Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-#' Multiple hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
 #'
 #' @details When input \code{lambdas} are null the default sequence of
 #' \code{\link[glmnet]{glmnet}} for the first model (the one with the first
@@ -149,11 +148,10 @@ print.HDpath <- function(x, ...) {
 
 plot.HDpath <- function(x, ...) {
   df <- data.frame("Frequency" = x$efreq[upper.tri(x$efreq)])
-  p <- ggplot(data = df, aes(x = "Frequency")) + geom_histogram() +
+  p <- ggplot(data = df, aes_string(x = "Frequency")) + geom_histogram() +
     theme_bw() + ggtitle("Distribution of edge frequency") +
     ylab("count") +
-    theme(title = element_text(size=10))
-  print(p)
+    theme(title = element_text(size = 10))
 
   return(p)
 }
@@ -164,26 +162,31 @@ plot.HDpath <- function(x, ...) {
 #' @import igraph
 #' @importFrom igraph graph_from_adjacency_matrix
 #' @importFrom igraph simplify
-#' @title Convert the result of imputedGLMnetwork into a network.
+#' @importFrom methods is
+#'
+#' @title Convert the result of imputedGLMnetwork or a matrix into a network.
 #' @export
 #'
 #' @description
 #' \code{GLMnetToGraph} combines the m inferred networks, obtained from m
-#' imputed datasets, into a single stable network
+#' imputed datasets, into a single stable network or convert a matrix of
+#' coefficients of a GLM model into a network (non zero coefficients are
+#' converted to edges)
 #'
 #' @param object an object of class \code{HDpath} as obtained from the function
-#' \code{\link{imputedGLMnetwork}}
+#' \code{\link{imputedGLMnetwork}} or a squared matrix with zero and non zero
+#' values
 #' @param threshold the percentage of times, among the m imputed networks, that
-#' an edge has to be predicted to be in the final network
+#' an edge has to be predicted to be in the final network. Used only for objects
+#' of class \code{HDpath}. Default to 0.9
 #'
 #' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-#' Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-#' Multiple hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
 #'
 #' @seealso \code{\link{imputedGLMnetwork}}, \code{\link[igraph]{igraph}}
 #'
@@ -205,12 +208,18 @@ plot.HDpath <- function(x, ...) {
 #'
 #' @return an 'igraph' object. See \code{\link[igraph]{igraph}}
 
-GLMnetToGraph <- function(object, threshold) {
-  if (threshold <0 | threshold > 1) {
-    stop("'threshold' must be a ratio (between 0 and 1)")
+GLMnetToGraph <- function(object, threshold = 0.9) {
+  if (is(object, "HDpath")) {
+    if (threshold < 0 | threshold > 1) {
+      stop("'threshold' must be a ratio (between 0 and 1)")
+    }
+    adj_sel <- object$efreq > round(length(object$path) * threshold)
+    net <- graph_from_adjacency_matrix(adj_sel, mode = "undirected")
+    net <- simplify(net)
+  } else {
+    adj_sel <- object != 0
+    net <- graph_from_adjacency_matrix(adj_sel, mode = "undirected")
+    net <- simplify(net)
   }
-  adj_sel <- object$efreq > round(length(object$path) * threshold)
-  net <- graph_from_adjacency_matrix(adj_sel, mode = "undirected")
-  net <- simplify(net)
   return(net)
 }
