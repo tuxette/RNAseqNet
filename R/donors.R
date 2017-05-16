@@ -32,10 +32,9 @@
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-#' Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-#' Multiple hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
 #'
 #' @seealso \code{\link{chooseSigma}}, \code{\link{imputedGLMnetwork}}
 #'
@@ -180,10 +179,9 @@ createDonors <- function(X, Y, sigma, seed = NULL) {
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-#' Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-#' Multiple hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
 #'
 #' @seealso \code{\link{imputeHD}}, \code{\link{chooseSigma}}
 #'
@@ -236,10 +234,9 @@ varIntra <- function(X, Y, donors) {
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-#' Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-#' Multiple hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
 #'
 #' @details The average intra-donor pool variance is described in (Imbert
 #' \emph{et al.}, 2017).
