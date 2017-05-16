@@ -36,7 +36,7 @@ NULL
 #' @format a data frame with 221 rows and 50 variables (genes). Rownames are
 #' identifiers for individuals.
 #'
-#' @source The raw data were download from \url{https://gtexportal.org/}. The
+#' @source The raw data were downloaded from \url{https://gtexportal.org/}. The
 #' TMM normalisation of RNA-seq expression was performed with the R package
 #' \code{edgeR}.
 #' @author Alyssa Imbert <alyssa.imbert@inra.fr>
