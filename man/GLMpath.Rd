@@ -2,8 +2,8 @@
 % Please edit documentation in R/poisson_net.R
 \name{GLMpath}
 \alias{GLMpath}
-\alias{print.GLMpath}
 \alias{summary.GLMpath}
+\alias{print.GLMpath}
 \title{Methods for 'GLMpath' objects.}
 \usage{
 \method{summary}{GLMpath}(object, ...)
@@ -21,12 +21,11 @@
 Methods for the result of \code{\link{GLMnetwork}}
 (\code{GLMpath} object)
 }
+\seealso{
+\code{\link{GLMnetwork}}
+}
 \author{
 {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 
 Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 }
-\seealso{
-\code{\link{GLMnetwork}}
-}
-

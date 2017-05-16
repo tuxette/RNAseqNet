@@ -2,9 +2,9 @@
 % Please edit documentation in R/donors.R
 \name{HDImputed}
 \alias{HDImputed}
-\alias{print.HDImputed}
-\alias{summary.HDImputed}
 \alias{summary.HDimputed}
+\alias{summary.HDImputed}
+\alias{print.HDImputed}
 \title{Methods for 'HDImputed' objects.}
 \usage{
 \method{summary}{HDimputed}(object, ...)
@@ -22,12 +22,11 @@
 Methods for the result of \code{\link{imputeHD}}
 (\code{HDImputed} object)
 }
+\seealso{
+\code{\link{imputeHD}}
+}
 \author{
 {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 
 Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 }
-\seealso{
-\code{\link{imputeHD}}
-}
-

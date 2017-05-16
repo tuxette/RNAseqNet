@@ -51,18 +51,16 @@ lung <- na.omit(lung)
 imputed_lung <- imputeHD(lung, thyroid, sigma = 2)
 
 }
+\references{
+{Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+}
+\seealso{
+\code{\link{chooseSigma}}, \code{\link{imputedGLMnetwork}}
+}
 \author{
 {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 
 Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 }
-\references{
-{Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-Multiple hot-deck imputation for network inference from RNA sequencing data.
-\emph{Preprint}.}
-}
-\seealso{
-\code{\link{chooseSigma}}, \code{\link{imputedGLMnetwork}}
-}
-

@@ -2,9 +2,9 @@
 % Please edit documentation in R/main.R
 \name{HDpath}
 \alias{HDpath}
-\alias{plot.HDpath}
-\alias{print.HDpath}
 \alias{summary.HDpath}
+\alias{print.HDpath}
+\alias{plot.HDpath}
 \title{Methods for 'HDpath' objects.}
 \usage{
 \method{summary}{HDpath}(object, ...)
@@ -39,12 +39,11 @@ plot(lung_hdmi)
 }
 
 }
+\seealso{
+\code{\link{imputedGLMnetwork}}
+}
 \author{
 {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 
 Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 }
-\seealso{
-\code{\link{imputedGLMnetwork}}
-}
-

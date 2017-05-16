@@ -2,23 +2,27 @@
 % Please edit documentation in R/main.R
 \name{GLMnetToGraph}
 \alias{GLMnetToGraph}
-\title{Convert the result of imputedGLMnetwork into a network.}
+\title{Convert the result of imputedGLMnetwork or a matrix into a network.}
 \usage{
-GLMnetToGraph(object, threshold)
+GLMnetToGraph(object, threshold = 0.9)
 }
 \arguments{
 \item{object}{an object of class \code{HDpath} as obtained from the function
-\code{\link{imputedGLMnetwork}}}
+\code{\link{imputedGLMnetwork}} or a squared matrix with zero and non zero
+values}
 
 \item{threshold}{the percentage of times, among the m imputed networks, that
-an edge has to be predicted to be in the final network}
+an edge has to be predicted to be in the final network. Used only for objects
+of class \code{HDpath}. Default to 0.9}
 }
 \value{
 an 'igraph' object. See \code{\link[igraph]{igraph}}
 }
 \description{
 \code{GLMnetToGraph} combines the m inferred networks, obtained from m
-imputed datasets, into a single stable network
+imputed datasets, into a single stable network or convert a matrix of
+coefficients of a GLM model into a network (non zero coefficients are
+converted to edges)
 }
 \examples{
 data(lung)
@@ -37,18 +41,16 @@ plot(lung_net)
 }
 
 }
+\references{
+{Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
+P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
+imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+}
+\seealso{
+\code{\link{imputedGLMnetwork}}, \code{\link[igraph]{igraph}}
+}
 \author{
 {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 
 Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 }
-\references{
-{Imbert, A., Le Gall, C., Armenise, C., Lefebvre, G., Hager, J.,
-Valsesia, A., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)
-Multiple hot-deck imputation for network inference from RNA sequencing data.
-\emph{Preprint}.}
-}
-\seealso{
-\code{\link{imputedGLMnetwork}}, \code{\link[igraph]{igraph}}
-}
-

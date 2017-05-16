@@ -19,4 +19,3 @@ been normalized with the TMM method.
 \author{
 Alyssa Imbert <alyssa.imbert@inra.fr>
 }
-

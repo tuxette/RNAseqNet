@@ -21,7 +21,8 @@ S3 object of class \code{stabilitySelection} : a list consisting of
   \item{\code{lambdas}}{ numeric regularization parameters used for
   regularization path}
   \item{\code{B}}{ number of iterations for stability selection}
-  \item{\code{best}}{ lambda value selected by StARS}
+  \item{\code{best}}{ index of the regularization parameter selected by StARS
+  in \code{lambdas}}
   \item{\code{variabilities}}{ numeric vector having same length than lambdas
   and providing the variability value as defined by StARS along the path}
 }
@@ -42,10 +43,6 @@ stability_lung <- stabilitySelection(lung, lambdas = lambdas, B = 4)
 \dontrun{plot(stability_lung)}
 
 }
-\author{
-{Alyssa Imbert, \email{alyssa.imbert@inra.fr}
-Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
-}
 \references{
 {Liu, H., Roeber, K. and Wasserman, L. (2010) Stability approach
 to regularization selection (StARS) for high dimensional graphical models. In
@@ -55,4 +52,7 @@ to regularization selection (StARS) for high dimensional graphical models. In
 \seealso{
 \code{\link{GLMnetwork}}
 }
-
+\author{
+{Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+}

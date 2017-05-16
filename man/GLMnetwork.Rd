@@ -40,11 +40,6 @@ lambdas <- 4 * 10^(seq(0, -2, length = 10))
 ref_lung <- GLMnetwork(lung, lambdas = lambdas)
 
 }
-\author{
-{Alyssa Imbert, \email{alyssa.imbert@inra.fr}
-
-Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
-}
 \references{
 {Allen, G. and Liu, Z. (2012) A log-linear model for inferring
 genetic networks from high-throughput sequencing data. In \emph{Proceedings
@@ -53,4 +48,8 @@ of IEEE International Conference on Bioinformatics and Biomedecine (BIBM)}.}
 \seealso{
 \code{\link{stabilitySelection}}
 }
+\author{
+{Alyssa Imbert, \email{alyssa.imbert@inra.fr}
 
+Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+}
