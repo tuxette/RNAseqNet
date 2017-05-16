@@ -1,0 +1,49 @@
+---
+title: "Log-Linear Poisson Graphical Model with Hot-Deck Multiple Imputation"
+author:
+- affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
+  name: Nathalie Villa-Vialaneix
+- affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
+  name: Alyssa Imbert
+output:
+  BiocStyle::pdf_document2: default
+  BiocStyle::html_document2: default
+package: RNAseqNet
+abstract: |
+  Short vignette pointing to RNAseqNet User's Guide.
+vignette: |
+  %\VignetteIndexEntry{Log-Linear Poisson Graphical Model with Hot-Deck Multiple Imputation}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+
+# Description
+
+The **R** package `r CRANpkg("RNAseqNet")` can be used to infer networks from
+RNA-seq expression data. The count data are given as a $n \times p$ matrix in 
+which $n$ is the number of individuals and $p$ the number of genes. This matrix
+is denoted by $\mathbf{X}$ in the sequel.
+
+Eventually, the RNA-seq dataset is complemented with an $n' \times d$ matrix, 
+$\mathbf{Y}$ which can be used to impute missing individuals in $\mathbf{X}$
+as described in [Imbert *et al.*, 2017]
+
+The RNAseqNet User's Guide can be opened with:
+```{r PDF, eval=FALSE}
+RNAseqNetUsersGuide()
+```
+
+The location of the source file is given by:
+```{r Rmd, eval=FALSE}
+RNAseqNetUsersGuide(html = FALSE)
+```
+
+
+# Reference
+
+Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud, P.A., Viguerie, 
+N. and Villa-Vialaneix, N. (2017) Multiple hot-deck imputation for network 
+inference from RNA sequencing data. *Preprint*.
+
+
