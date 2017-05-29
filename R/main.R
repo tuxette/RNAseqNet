@@ -25,9 +25,10 @@
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
-#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
-#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
+#' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple
+#' hot-deck imputation for network inference from RNA sequencing data.
+#' \emph{Preprint}.}
 #'
 #' @details When input \code{lambdas} are null the default sequence of
 #' \code{\link[glmnet]{glmnet}} for the first model (the one with the first
@@ -184,9 +185,10 @@ plot.HDpath <- function(x, ...) {
 #'
 #' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
 #'
-#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
-#' P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
-#' imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+#' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
+#' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple
+#' hot-deck imputation for network inference from RNA sequencing data.
+#' \emph{Preprint}.}
 #'
 #' @seealso \code{\link{imputedGLMnetwork}}, \code{\link[igraph]{igraph}}
 #'

@@ -15,10 +15,10 @@ citEntry(
 citEntry(
   entry = 'unpublished',
   title = 'Multiple hot-deck imputation for network inference from RNA sequencing data',
-  author = personList(as.person("Alyssa Imbert"), as.person("Armand Valsesia"), as.person("Caroline Le Gall"), as.person("Claudia Armenise"), as.person("Pierre-Antoine Gourraud"), as.person("Nathalie Viguerie"), as.person("Nathalie Villa-Vialaneix")),
+  author = personList(as.person("Alyssa Imbert"), as.person("Armand Valsesia"), as.person("Caroline Le Gall"), as.person("Claudia Armenise"), as.person("Gregory Lefebvre"), as.person("Pierre-Antoine Gourraud"), as.person("Nathalie Viguerie"), as.person("Nathalie Villa-Vialaneix")),
   note = 'Preprint',
 
-  textVersion = paste('Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)',
+  textVersion = paste('Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre, G., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017)',
                       'Multiple hot-deck imputation for network inference from RNA sequencing data.',
                       'Preprint.')
 )

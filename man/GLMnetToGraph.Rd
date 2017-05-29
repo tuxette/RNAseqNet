@@ -42,9 +42,10 @@ plot(lung_net)
 
 }
 \references{
-{Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Gourraud,
-P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple hot-deck
-imputation for network inference from RNA sequencing data. \emph{Preprint}.}
+{Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
+G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple
+hot-deck imputation for network inference from RNA sequencing data.
+\emph{Preprint}.}
 }
 \seealso{
 \code{\link{imputedGLMnetwork}}, \code{\link[igraph]{igraph}}

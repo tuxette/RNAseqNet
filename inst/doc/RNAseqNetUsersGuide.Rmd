@@ -30,9 +30,9 @@ is denoted by $\mathbf{X}$ in the sequel.
 Eventually, the RNA-seq dataset is complemented with an $n' \times d$ matrix, 
 $\mathbf{Y}$ which can be used to impute missing individuals in $\mathbf{X}$
 as described in [Imbert *et al.*, 2017]^[Imbert, A., Valsesia, A., Le Gall, C.,
-Armenise, C., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) 
-Multiple hot-deck imputation for network inference from RNA sequencing data.
-*Preprint*.].
+Armenise, C., Lefebvre, G., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N.
+(2017) Multiple hot-deck imputation for network inference from RNA sequencing 
+data. *Preprint*.].
 
 ```{r loadPkg, echo=FALSE, results='hide', message=FALSE}
 library(RNAseqNet)
