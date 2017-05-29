@@ -12,10 +12,7 @@ sudo: false
 cache: packages
 warnings_are_errors: false
 r_check_args: --as-cran
-latex: false
-
-before_install:
-- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+latex: required
 
 matrix:
   include:
