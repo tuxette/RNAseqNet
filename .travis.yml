@@ -8,11 +8,15 @@
 # Validate your .travis.yml file at http://lint.travis-ci.org/
 #----------------------------------------------------------------
 language: r
-sudo: false
+sudo: required
 cache: packages
 warnings_are_errors: false
 r_check_args: --as-cran
 latex: required
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get --no-install-recommends install -y texlive-fonts-extra
 
 matrix:
   include:
