@@ -35,7 +35,7 @@
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
 #' hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Bioinformatics}. DOI: 10.1093/bioinformatics/btx819.}
+#' \emph{Bioinformatics}. \doi{10.1093/bioinformatics/btx819}.}
 #'
 #' @seealso \code{\link{chooseSigma}}, \code{\link{imputedGLMnetwork}}
 #'
@@ -183,7 +183,7 @@ createDonors <- function(X, Y, sigma, seed = NULL) {
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
 #' hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Bioinformatics}. DOI: 10.1093/bioinformatics/btx819.}
+#' \emph{Bioinformatics}. \doi{10.1093/bioinformatics/btx819}.}
 #'
 #' @seealso \code{\link{imputeHD}}, \code{\link{chooseSigma}}
 #'
@@ -239,7 +239,7 @@ varIntra <- function(X, Y, donors) {
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
 #' hot-deck imputation for network inference from RNA sequencing data.
-#' \emph{Bioinformatics}. DOI: 10.1093/bioinformatics/btx819}
+#' \emph{Bioinformatics}. \doi{10.1093/bioinformatics/btx819}.}
 #'
 #' @details The average intra-donor pool variance is described in (Imbert
 #' \emph{et al.}, 2018).
