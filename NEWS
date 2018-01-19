@@ -1,4 +1,9 @@
-Version 0.1.1
+Version 0.1.2
+  remove Biocstyle for vignette formatting (instable links with Bioconductor)
+  updated references with published article
+
+*******************************************************************************
+Version 0.1.1 [2017-05-16]
   new features
     GLMnetToGraph can now be used with matrices
 

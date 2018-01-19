@@ -17,16 +17,16 @@ function \code{\link{imputeHD}})}
 }
 \value{
 \code{varIntra} returns a numeric value which is the average
-intra-donor pool variance, as described in (Imbert \emph{et al.}, 2017).
+intra-donor pool variance, as described in (Imbert \emph{et al.}, 2018).
 }
 \description{
 \code{varIntra} computes the average intra-donor pool variance.
 }
 \references{
 {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
-G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple
+G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
 hot-deck imputation for network inference from RNA sequencing data.
-\emph{Preprint}.}
+\emph{Bioinformatics}. DOI: 10.1093/bioinformatics/btx819.}
 }
 \seealso{
 \code{\link{imputeHD}}, \code{\link{chooseSigma}}

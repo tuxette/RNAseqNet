@@ -1,8 +1,8 @@
 Package: RNAseqNet
 Type: Package
 Title: Log-Linear Poisson Graphical Model with Hot-Deck Multiple Imputation
-Version: 0.1.1
-Date: 2017-05-16
+Version: 0.1.2
+Date: 2018-01-19
 Authors@R: c(person("Alyssa", "Imbert", role = c("aut"), email="alyssa.imbert@inra.fr"),
              person("Nathalie", "Villa-Vialaneix", role = c("aut", "cre"), email="nathalie.villa-vialaneix@inra.fr"))
 Maintainer: Nathalie Villa-Vialaneix <nathalie.villa-vialaneix@inra.fr>
@@ -11,7 +11,8 @@ Description: Infer log-linear Poisson Graphical Model with an auxiliary data
     of the inference with an auxiliary dataset. Standard log-linear Poisson 
     graphical model can also be used for the inference and the Stability 
     Approach for Regularization Selection (StARS) is implemented to drive the 
-    selection of the regularization parameter.
+    selection of the regularization parameter. The method is fully described in
+    Imbert et al. (2018) <doi:10.1093/bioinformatics/btx819>.
 License: GPL (>= 3)
 Repository: CRAN
 Depends:
@@ -23,7 +24,7 @@ Imports:
     glmnet,
     methods,
     utils
-Suggests: BiocStyle, knitr, rmarkdown
+Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true

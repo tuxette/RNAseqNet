@@ -59,9 +59,9 @@ lung_hdmi <- imputedGLMnetwork(lung, thyroid, sigma = 2, lambdas = lambdas,
 }
 \references{
 {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
-G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple
+G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
 hot-deck imputation for network inference from RNA sequencing data.
-\emph{Preprint}.}
+\emph{Bioinformatics}. DOI: 10.1093/bioinformatics/btx819.}
 }
 \author{
 {Alyssa Imbert, \email{alyssa.imbert@inra.fr}

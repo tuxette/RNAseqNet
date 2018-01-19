@@ -30,7 +30,7 @@ enough number of donors in every pool).
 }
 \details{
 The average intra-donor pool variance is described in (Imbert
-\emph{et al.}, 2017).
+\emph{et al.}, 2018).
 }
 \examples{
 data(lung)
@@ -45,9 +45,9 @@ sigma_stats <- chooseSigma(lung, thyroid, 1:5)
 }
 \references{
 {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
-G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2017) Multiple
+G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
 hot-deck imputation for network inference from RNA sequencing data.
-\emph{Preprint}.}
+\emph{Bioinformatics}. DOI: 10.1093/bioinformatics/btx819}
 }
 \seealso{
 \code{\link{varIntra}}

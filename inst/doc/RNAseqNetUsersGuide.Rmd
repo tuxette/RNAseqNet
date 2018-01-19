@@ -6,9 +6,10 @@ author:
 - name: Alyssa Imbert
   affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
 output:
-  BiocStyle::html_document2:
-    toc_float: true
-  BiocStyle::pdf_document2: default
+  html_document:
+    toc: yes
+  pdf_document:
+    toc: yes
 package: RNAseqNet
 abstract: |
   Tutorial on how to use the _RNAseqNet_ package to infer networks from RNA-seq
@@ -22,17 +23,17 @@ vignette: |
 
 # Introduction
 
-The **R** package `r CRANpkg("RNAseqNet")` can be used to infer networks from
-RNA-seq expression data. The count data are given as a $n \times p$ matrix in 
-which $n$ is the number of individuals and $p$ the number of genes. This matrix
-is denoted by $\mathbf{X}$ in the sequel.
+The **R** package `RNAseqNet` can be used to infer networks from RNA-seq 
+expression data. The count data are given as a $n \times p$ matrix in which $n$ 
+is the number of individuals and $p$ the number of genes. This matrix is denoted
+by $\mathbf{X}$ in the sequel.
 
 Eventually, the RNA-seq dataset is complemented with an $n' \times d$ matrix, 
 $\mathbf{Y}$ which can be used to impute missing individuals in $\mathbf{X}$
-as described in [Imbert *et al.*, 2017]^[Imbert, A., Valsesia, A., Le Gall, C.,
+as described in [Imbert *et al.*, 2018]^[Imbert, A., Valsesia, A., Le Gall, C.,
 Armenise, C., Lefebvre, G., Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N.
-(2017) Multiple hot-deck imputation for network inference from RNA sequencing 
-data. *Preprint*.].
+(2018) Multiple hot-deck imputation for network inference from RNA sequencing 
+data. *Bioinformatics*. doi:10.1093/bioinformatics/btx819].
 
 ```{r loadPkg, echo=FALSE, results='hide', message=FALSE}
 library(RNAseqNet)
@@ -44,7 +45,7 @@ library(RNAseqNet)
 Two datasets are available in the package: ```lung``` and ```thyroid``` with 
 $n = 221$ rows and respectively 100 and 50 columns. The raw data were downloaded
 from https://gtexportal.org/. The TMM normalisation of RNA-seq expression was
-performed with the **R** package `r Biocpkg("edgeR")`.
+performed with the **R** package `edgeR`.
 
 Data are loaded with:
 ```{r loadData}
@@ -120,7 +121,7 @@ lung <- na.omit(lung)
 boxplot(log2(lung + 1), las = 3, cex.names = 0.5)
 ```
 
-The method described in [Imbert *et al.*, 2017] is thus used to infer a network
+The method described in [Imbert *et al.*, 2018] is thus used to infer a network
 for ```lung``` expression data, imputing missing individuals from the 
 information provided between gene expressions by the ```thyroid``` dataset.
 
