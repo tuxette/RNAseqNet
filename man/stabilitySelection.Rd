@@ -53,6 +53,6 @@ to regularization selection (StARS) for high dimensional graphical models. In
 \code{\link{GLMnetwork}}
 }
 \author{
-{Alyssa Imbert, \email{alyssa.imbert@inra.fr}
-Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+{Alyssa Imbert, \email{alyssa.imbert@gmail.com}
+Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 }

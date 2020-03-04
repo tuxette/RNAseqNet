@@ -17,5 +17,5 @@ RNA-seq expressions measured from thyroid tissue. The RNA-seq expressions
 have been normalized with the TMM method.
 }
 \author{
-Alyssa Imbert <alyssa.imbert@inra.fr>
+Alyssa Imbert <alyssa.imbert@gmail.com>
 }
