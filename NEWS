@@ -1,3 +1,11 @@
+Version 0.1.2 [2020-03-04]
+  bug fixes
+    fixed a bug related to a change in stringsAsFactor policy
+
+  misc
+    updated authors' names and emails
+
+*******************************************************************************
 Version 0.1.2
   remove Biocstyle for vignette formatting (instable links with Bioconductor)
   updated references with published article

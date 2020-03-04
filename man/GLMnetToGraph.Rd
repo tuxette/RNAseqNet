@@ -51,7 +51,7 @@ hot-deck imputation for network inference from RNA sequencing data.
 \code{\link{imputedGLMnetwork}}, \code{\link[igraph]{igraph}}
 }
 \author{
-{Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+{Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 
-Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 }

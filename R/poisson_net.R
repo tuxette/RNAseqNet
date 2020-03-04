@@ -23,9 +23,9 @@
 #' Poisson graphical model. If \code{TRUE}, log normalization and scaling are
 #' performed prior the model is fit. Default to \code{TRUE}
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @details When input \code{lambdas} are null the default sequence of
 #' \code{\link[glmnet]{glmnet}} for the first model (the one with the first
@@ -105,9 +105,9 @@ GLMnetwork <- function(counts, lambdas = NULL, normalize = TRUE) {
 #' @param object \code{GLMpath} object
 #' @param x \code{GLMpath} object
 #' @param ... not used
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @seealso \code{\link{GLMnetwork}}
 
@@ -148,8 +148,8 @@ print.GLMpath <- function(x, ...) {
 #' @details When input \code{lambdas} are null the default sequence of
 #' \code{\link[glmnet]{glmnet}} (see \code{\link{GLMnetwork}} for details).
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @seealso \code{\link{GLMnetwork}}
 #'
@@ -223,9 +223,9 @@ stabilitySelection <- function(counts, lambdas = NULL, B = 20) {
 #' @param object \code{stars} object
 #' @param x \code{stars} object
 #' @param ... not used
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @seealso \code{\link{stabilitySelection}}
 

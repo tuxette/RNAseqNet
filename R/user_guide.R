@@ -11,9 +11,9 @@
 #' compiled PDF or the Rmd source. Default to \code{TRUE}
 #' @param view logical. Should the document be opened using the default HTML
 #' viewer? Default to \code{html}. It has no effect if \code{html = FALSE}
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @details The function \code{vignette("RNAseqNet")} will find the short
 #' RNAseqNet vignette that describes how to obtain the RNAseqNet User's Guide.

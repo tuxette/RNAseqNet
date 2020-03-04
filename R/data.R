@@ -17,7 +17,7 @@
 #' The TMM normalisation of RNA-seq expression was performed with the R package
 #' \code{edgeR}.
 #'
-#' @author Alyssa Imbert <alyssa.imbert@inra.fr>
+#' @author Alyssa Imbert <alyssa.imbert@gmail.com>
 
 NULL
 
@@ -39,6 +39,6 @@ NULL
 #' @source The raw data were downloaded from \url{https://gtexportal.org/}. The
 #' TMM normalisation of RNA-seq expression was performed with the R package
 #' \code{edgeR}.
-#' @author Alyssa Imbert <alyssa.imbert@inra.fr>
+#' @author Alyssa Imbert <alyssa.imbert@gmail.com>
 
 NULL

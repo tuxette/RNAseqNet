@@ -21,9 +21,9 @@
 #'
 #' @export
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple
@@ -103,9 +103,9 @@ imputedGLMnetwork <- function(X, Y, sigma, m = 50, lambdas = NULL, B = 20) {
 #' @param object \code{HDpath} object
 #' @param x \code{HDpath} object
 #' @param ... not used
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @examples
 #' data(lung)
@@ -181,9 +181,9 @@ plot.HDpath <- function(x, ...) {
 #' an edge has to be predicted to be in the final network. Used only for objects
 #' of class \code{HDpath}. Default to 0.9
 #'
-#' @author {Alyssa Imbert, \email{alyssa.imbert@inra.fr}
+#' @author {Alyssa Imbert, \email{alyssa.imbert@gmail.com}
 #'
-#' Nathalie Villa-Vialaneix, \email{nathalie.villa-vialaneix@inra.fr}}
+#' Nathalie Vialaneix, \email{nathalie.vialaneix@inrae.fr}}
 #'
 #' @references {Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre,
 #' G. Gourraud, P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple

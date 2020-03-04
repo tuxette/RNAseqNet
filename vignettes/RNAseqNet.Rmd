@@ -2,7 +2,7 @@
 title: "Log-Linear Poisson Graphical Model with Hot-Deck Multiple Imputation"
 author:
 - affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
-  name: Nathalie Villa-Vialaneix
+  name: Nathalie Vialaneix
 - affiliation: MIAT, Université de Toulouse, INRA, Castanet-Tolosan, France
   name: Alyssa Imbert
 output:
@@ -41,7 +41,6 @@ The location of the source file is given by:
 RNAseqNetUsersGuide(html = FALSE)
 ```
 
-
 # Reference
 
 Imbert, A., Valsesia, A., Le Gall, C., Armenise, C., Lefebvre, G., Gourraud, 
@@ -49,4 +48,9 @@ P.A., Viguerie, N. and Villa-Vialaneix, N. (2018) Multiple hot-deck imputation
 for network inference from RNA sequencing data. *Bioinformatics*. 
 DOI: http://dx.doi.org/10.1093/bioinformatics/btx819.
 
+# Session information for the vignette
+
+```{r sessionInfo}
+sessionInfo()
+```
 
