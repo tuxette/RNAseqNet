@@ -36,14 +36,14 @@
 
 RNAseqNetUsersGuide <- function(html = TRUE, view = html) {
   if (html) {
-    f <- system.file("doc", "RNAseqNetUsersGuide.html", package = "RNAseqNet")
+    f <- system.file("misc", "RNAseqNetUsersGuide.html", package = "RNAseqNet")
     if (view) {
       if (.Platform$OS.type == "windows")
-        shell.exec(f)
-      else browseURL(paste0("file://", f))
+        shell.exec(normalizePath(f))
+      else browseURL(paste0("file://", normalizePath(f)))
     }
   } else {
-    f <- system.file("doc", "RNAseqNetUsersGuide.Rmd", package = "RNAseqNet")
+    f <- system.file("misc", "RNAseqNetUsersGuide.Rmd", package = "RNAseqNet")
     if (view) {
       warning("'RNAseqNetUserGuide.Rmd' can not be viewed.
               However, the location of the file is returned by the function.",

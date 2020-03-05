@@ -5,7 +5,6 @@
 \alias{summary.stars}
 \alias{print.stars}
 \alias{plot.stars}
-\alias{stars-class}
 \title{Methods for 'stars' objects.}
 \usage{
 \method{summary}{stars}(object, ...)

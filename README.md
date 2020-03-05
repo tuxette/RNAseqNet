@@ -11,5 +11,6 @@ ith an auxiliary dataset. Standard log-linear Poisson GM can also be used for
 the inference and the StARS criterion is implemented to drive the selection of
 the regularization parameter.
 
-See [[Citation file]](./inst/CITATION) for citation details and the 
-[[User's Guide]](./inst/doc/RNAseqNetUsersGuide.html) for an example of usage.
+See Citation file (in `./inst/CITATION`) for citation details and the User's 
+Guide included in `./inst/misc/RNAseqNetUsersGuide.html` for an example of 
+usage.
