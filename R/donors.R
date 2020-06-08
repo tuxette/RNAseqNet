@@ -101,7 +101,6 @@ imputeHD <- function(X, Y, sigma, m = 50, seed = NULL) {
 ## Methods for objects of class HDImputed
 #' @title Methods for 'HDImputed' objects.
 #' @name HDImputed
-#' @exportClass HDImputed
 #' @export
 #'
 #' @aliases summary.HDImputed

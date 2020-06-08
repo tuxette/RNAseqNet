@@ -91,7 +91,6 @@ imputedGLMnetwork <- function(X, Y, sigma, m = 50, lambdas = NULL, B = 20) {
 ## Methods for objects of class HDpath
 #' @title Methods for 'HDpath' objects.
 #' @name HDpath
-#' @exportClass HDpath
 #' @export
 #'
 #' @aliases summary.HDpath

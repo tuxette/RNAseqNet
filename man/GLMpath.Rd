@@ -4,6 +4,7 @@
 \alias{GLMpath}
 \alias{summary.GLMpath}
 \alias{print.GLMpath}
+\alias{GLMpath-class}
 \title{Methods for 'GLMpath' objects.}
 \usage{
 \method{summary}{GLMpath}(object, ...)

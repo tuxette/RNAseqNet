@@ -1,8 +1,8 @@
 Package: RNAseqNet
 Type: Package
 Title: Log-Linear Poisson Graphical Model with Hot-Deck Multiple Imputation
-Version: 0.1.3
-Date: 2020-03-04
+Version: 0.1.4
+Date: 2020-06-08
 Authors@R: c(person("Alyssa", "Imbert", role = c("aut"), email="alyssa.imbert@gmail.com"),
              person("Nathalie", "Vialaneix", role = c("aut", "cre"), email="nathalie.vialaneix@inrae.fr"))
 Maintainer: Nathalie Vialaneix <nathalie.vialaneix@inrae.fr>
@@ -28,4 +28,4 @@ Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0

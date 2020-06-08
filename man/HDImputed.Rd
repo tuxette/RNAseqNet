@@ -5,6 +5,7 @@
 \alias{summary.HDimputed}
 \alias{summary.HDImputed}
 \alias{print.HDImputed}
+\alias{HDImputed-class}
 \title{Methods for 'HDImputed' objects.}
 \usage{
 \method{summary}{HDimputed}(object, ...)

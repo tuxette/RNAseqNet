@@ -4,6 +4,7 @@
 \alias{HDpath}
 \alias{summary.HDpath}
 \alias{print.HDpath}
+\alias{HDpath-class}
 \alias{plot.HDpath}
 \title{Methods for 'HDpath' objects.}
 \usage{

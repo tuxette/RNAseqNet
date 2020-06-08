@@ -93,7 +93,6 @@ GLMnetwork <- function(counts, lambdas = NULL, normalize = TRUE) {
 ## Methods for objects of class GLMpath
 #' @title Methods for 'GLMpath' objects.
 #' @name GLMpath
-#' @exportClass GLMpath
 #' @export
 #'
 #' @aliases summary.GLMpath
@@ -210,7 +209,6 @@ stabilitySelection <- function(counts, lambdas = NULL, B = 20) {
 ## Methods for objects of class stars
 #' @title Methods for 'stars' objects.
 #' @name stars
-#' @exportClass stars
 #' @export
 #'
 #' @aliases summary.stars
